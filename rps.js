@@ -22,8 +22,17 @@ function play () {
         if (v[0] === true ) {
             rpsLogic(userChoice, computer)
         } else if (v[0] === false) {
-            userChoice = prompt(v[1])
-            rpsLogic(userChoice, computer)
+            //cf
+            //var txt;
+            if (confirm(v[1])) {
+               let userChoice = v[2];
+                rpsLogic(userChoice, computer)
+            } else {
+               location.reload();
+            }
+            //cf
+           // userChoice = prompt(v[1])
+            //rpsLogic(userChoice, computer)
         }
     }
 }
